@@ -1,0 +1,17 @@
+<h1> Registrado </h1>
+
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@post.errors.count, "error") %> 
+            prohibited thisarticle from being saved:
+        </h2>
+        <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+<% else %>
+    <h1> te registraste con exito </h1>
+<% end %>
