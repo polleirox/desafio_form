@@ -1,4 +1,4 @@
-<h1>Posts#dashboard</h1>
+<h1>Ingresar producto</h1>
 <form method="get" action="<%=posts_create_path %>">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <div class="form-group">
@@ -13,8 +13,8 @@
 
     
     <div class="form-group">
-        <label for="image">Imagen</label>
-        <input name="image" class="form-control">
+        <label for="image_url">Imagen</label>
+        <input name="image_url" class="form-control">
     </div>
 
     <button type="submit" class="btn btn.primary">Submit</button>

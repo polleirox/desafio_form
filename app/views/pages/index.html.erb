@@ -1,2 +1,26 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="post">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
+
+<table class="table">
+    <tr>
+        <th>Titulo</th>
+        <th>Comentario</th>
+        <th>Imagen</th>
+        <th>Fecha</th>
+    </tr>
+
+    <% @post.each do |post| %>
+        <tr>
+            <td><%= post.title %></td>
+            <td><%= post.comment %></td>
+            <td><%= post.image_url %></td>
+            <td><%= post.updated_at %></td>
+        </tr>
+    <% end %>
+</table>

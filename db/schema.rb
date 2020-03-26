@@ -10,16 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_234434) do
+ActiveRecord::Schema.define(version: 2020_03_25_010249) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_url_file_name"
-    t.string "image_url_content_type"
-    t.integer "image_url_file_size"
-    t.datetime "image_url_updated_at"
+    t.text "comment"
+    t.text "image_url"
   end
 
 end
